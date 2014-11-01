@@ -1,7 +1,7 @@
-#include <map>
+#include <map> //this allows you to use mapping in your program
 #include <locale>
-#include <string>
-#include <iostream>
+#include <string> //this allows you to use strings in your program
+#include <iostream> //this is what you need in every c++ program
 using namespace std; //using standard library
 
 int start() //the function for the random numner generator
@@ -12,8 +12,9 @@ int start() //the function for the random numner generator
     
     return computerchoice; //return the computer choice 
 }
-int main(){
-    string Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17, Q18, Q19, Q20, Q21, Q22, Q23, Q24, Q25, Q26, Q27, Q28, Q29, Q30, Q31, Q32, Q33, Q34, Q35, Q36, Q37; //list of strings for our questions
+int main() //main function
+{
+    string Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17, Q18, Q19, Q20, Q21, Q22, Q23, Q24, Q25, Q26, Q27, Q28, Q29, Q30, Q31, Q32, Q33, Q34, Q35, Q36, Q37; //list of strings which represent our questions
     
     Q1 = "All the operations used to construct algorithms belong to one of only three categories: \n1.    Sequential \n2.    Conditional \nWhat is the third operation?\n\n"; //question 1 
     
@@ -21,10 +22,10 @@ int main(){
     
     Q3 ="What generation were transistors and core memories invented?\nA.     Second\nB.     First\nC.     Fifth\nD.    Third\n"; //question 3
     
-    Q4 ="a "; 
-    Q5 =" a";
-    Q6 =" a";
-    Q7 =" a";
+    Q4 ="a "; //question 4
+    Q5 =" a"; //question 5
+    Q6 =" a"; //question 6
+    Q7 =" a"; //question 7
     
     Q8 ="Any operation on this computer that exceeds the maximum allowable value is called ___________ _________.\n"; //question 8
     
@@ -38,31 +39,33 @@ int main(){
     Q15 ="The study of the efficiency of algorithms is called _________  __ __________.\n"; //question 15
     Q16 =" ";
     Q17 ="A  _______ can be thought of as a group of one or more, programming statements that collectively has a name.\n"; //question17
-    Q18 =" a";
-    Q19 ="Every complete statement ends with a\nA)   Period\nB)   # symbol\nC)   semicolon\nD)   ending brace";
-    Q20 ="Which of the following statements is correct?\nA)   #include (iostream)\nB)   #include {iostream}\nC)   #include <iostream>\nD)   #include [iostream]\nE)   All of the above\n";
-    Q21 ="A _________ _____ is a statement that causes a function to execute. A function definition contains the statements that make up the function.\n";
-    Q22 ="The ___ statement can cause other statements to execute only under certain conditions.\n";
-    Q23 =" a";
-    Q24 ="a ";
-    Q25 ="_______ ______ is breaking a program up into smaller, manageable functions. \n";
-    Q26 ="A ________ collection of statements to perform a specific task.\n";
-    Q27 =": __________: Values passed to a function.\n";
-    Q28 ="__________: Variables in function that hold values passed as arguments.\n";
-    Q29 ="_____  ___ _____: when an argument is passed to a function, a copy of its value is placed in the parameter.\n";
-    Q30 ="______  ______: defined within a function or block; accessible only with the function or block.\n";
-    Q31 ="______  ______: a variable defined outside all functions; it is accessible to all functions within its scope.\n";
-    Q32 =" _______  ______: a named constant that can be used by every function in a program.\n";
-    Q33 ="______ ______: values passed automatically if arguments are missing from the function call\n";
-    Q34 ="_______  ______: an alias for another variable.Mechanism that allows a function to work with the original argument from the function call, not a copy of the argument\n";
-    Q35 ="True or false: 4 Things Before A Compiler Runs it Must Know About a Function :\n1) name\n2) return type\n3) number of parameters\n4) data type of each parameter\n";
-    Q36 ="True or false: \n The address operator (&) returns the memory address of a variable.\n";
-    Q37 ="a ";
+    Q18 =" a"; //question 18
+    Q19 ="Every complete statement ends with a\nA)   Period\nB)   # symbol\nC)   semicolon\nD)   ending brace"; //question 19
+    Q20 ="Which of the following statements is correct?\nA)   #include (iostream)\nB)   #include {iostream}\nC)   #include <iostream>\nD)   #include [iostream]\nE)   All of the above\n"; //question 20
+    Q21 ="A _________ _____ is a statement that causes a function to execute. A function definition contains the statements that make up the function.\n"; //question 21
+    Q22 ="The ___ statement can cause other statements to execute only under certain conditions.\n"; //question 22
+    Q23 =" a"; //question 23
+    Q24 ="a "; //question 24
+    Q25 ="_______ ______ is breaking a program up into smaller, manageable functions. \n"; //question 25
+    Q26 ="A ________ collection of statements to perform a specific task.\n"; //question 26
+    Q27 =": __________: Values passed to a function.\n"; //question 27
+    Q28 ="__________: Variables in function that hold values passed as arguments.\n"; //question 28 
+    Q29 ="_____  ___ _____: when an argument is passed to a function, a copy of its value is placed in the parameter.\n"; //question 29
+    Q30 ="______  ______: defined within a function or block; accessible only with the function or block.\n"; //question 30
+    Q31 ="______  ______: a variable defined outside all functions; it is accessible to all functions within its scope.\n"; //question 31
+    Q32 =" _______  ______: a named constant that can be used by every function in a program.\n"; //question 32
+    Q33 ="______ ______: values passed automatically if arguments are missing from the function call\n"; //question 33
+    Q34 ="_______  ______: an alias for another variable.Mechanism that allows a function to work with the original argument from the function call, not a copy of the argument\n"; //question 34
+    Q35 ="True or false: 4 Things Before A Compiler Runs it Must Know About a Function :\n1) name\n2) return type\n3) number of parameters\n4) data type of each parameter\n"; //question 35
+    Q36 ="True or false: \n The address operator (&) returns the memory address of a variable.\n"; //question 36
+    Q37 ="a "; //question 37
     
-    map<string, string> question; 
-    map<string, string> answer;
-    map<string, int> points;
+    map<string, string> question; //this is passing in strings as vectors that will be used for the question
+    map<string, string> answer; //this is passing in strings as vectors that will be used for the answer
+    map<string, int> points; //this is passing in a string and an int as vectors that will be used for points
      
+    //these are questions in the game
+    //what the user will see is the string in [] which is being set to the key value which lines up with the mapping
     question["CIS111 Q1"] = Q1;
     question["CIS111 Q2"] = Q2;
     question["CIS111 Q3"] = Q3;
