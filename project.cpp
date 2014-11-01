@@ -2,42 +2,42 @@
 #include <locale>
 #include <string>
 #include <iostream>
-using namespace std;
+using namespace std; //using standard library
 
-int start()
+int start() //the function for the random numner generator
 {
-    int computerchoice;
+    int computerchoice; //initializes the variable 
     //srand(time(NULL));
-    computerchoice = (rand()%10)+1;
+    computerchoice = (rand()%10)+1; //random number generator 
     
-    return computerchoice;
+    return computerchoice; //return the computer choice 
 }
 int main(){
-    string Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17, Q18, Q19, Q20, Q21, Q22, Q23, Q24, Q25, Q26, Q27, Q28, Q29, Q30, Q31, Q32, Q33, Q34, Q35, Q36, Q37;
+    string Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17, Q18, Q19, Q20, Q21, Q22, Q23, Q24, Q25, Q26, Q27, Q28, Q29, Q30, Q31, Q32, Q33, Q34, Q35, Q36, Q37; //list of strings for our questions
     
-    Q1 = "All the operations used to construct algorithms belong to one of only three categories: \n1.    Sequential \n2.    Conditional \nWhat is the third operation?\n\n";
+    Q1 = "All the operations used to construct algorithms belong to one of only three categories: \n1.    Sequential \n2.    Conditional \nWhat is the third operation?\n\n"; //question 1 
     
-    Q2 ="What is the best definition of an algorithm?\nA. A well-ordered collection of unambiguous and effectively computable operations that, when executed, produces a result and halts in a finite amount of time.\nB. A list of instructions that can be effectively computable or it can be unsolveable.\nC. Instructions to accomplish a task.\nD. Computer language.\n";
+    Q2 ="What is the best definition of an algorithm?\nA. A well-ordered collection of unambiguous and effectively computable operations that, when executed, produces a result and halts in a finite amount of time.\nB. A list of instructions that can be effectively computable or it can be unsolveable.\nC. Instructions to accomplish a task.\nD. Computer language.\n"; //question 2
     
-    Q3 ="What generation were transistors and core memories invented?\nA.     Second\nB.     First\nC.     Fifth\nD.    Third\n";
+    Q3 ="What generation were transistors and core memories invented?\nA.     Second\nB.     First\nC.     Fifth\nD.    Third\n"; //question 3
     
-    Q4 ="a ";
+    Q4 ="a "; 
     Q5 =" a";
     Q6 =" a";
     Q7 =" a";
     
-    Q8 ="Any operation on this computer that exceeds the maximum allowable value is called ___________ _________.\n";
+    Q8 ="Any operation on this computer that exceeds the maximum allowable value is called ___________ _________.\n"; //question 8
     
-    Q9 ="In an  __________ representation, objects can take on any value.\n";
+    Q9 ="In an  __________ representation, objects can take on any value.\n"; //question 9
     
-    Q10 ="The __________ of the wave is a measure of its loudness—the greater the ________ the louder the sound.\n";
-    Q11 ="The construction of computer circuits is based on the branch of mathematics and symbolic logic called _________   __________.\n";
-    Q12 ="A _______ is an electronic device that operates on a collection of binary inputs to produce a binary output.\n";
-    Q13 ="A _______ is a collection of logic gates that transforms a set of binary inputs into a set of binary outputs and in which the values of the outputs depend only on the current values of the inputs.\n";
-    Q14 ="The study of algorithms is _________	___________.\n";
-    Q15 ="The study of the efficiency of algorithms is called _________  __ __________.\n";
+    Q10 ="The __________ of the wave is a measure of its loudness—the greater the ________ the louder the sound.\n"; //question 10
+    Q11 ="The construction of computer circuits is based on the branch of mathematics and symbolic logic called _________   __________.\n"; //question 11
+    Q12 ="A _______ is an electronic device that operates on a collection of binary inputs to produce a binary output.\n"; //question 12
+    Q13 ="A _______ is a collection of logic gates that transforms a set of binary inputs into a set of binary outputs and in which the values of the outputs depend only on the current values of the inputs.\n"; //question 13
+    Q14 ="The study of algorithms is _________	___________.\n"; //question 14
+    Q15 ="The study of the efficiency of algorithms is called _________  __ __________.\n"; //question 15
     Q16 =" ";
-    Q17 ="A  _______ can be thought of as a group of one or more, programming statements that collectively has a name.\n";
+    Q17 ="A  _______ can be thought of as a group of one or more, programming statements that collectively has a name.\n"; //question17
     Q18 =" a";
     Q19 ="Every complete statement ends with a\nA)   Period\nB)   # symbol\nC)   semicolon\nD)   ending brace";
     Q20 ="Which of the following statements is correct?\nA)   #include (iostream)\nB)   #include {iostream}\nC)   #include <iostream>\nD)   #include [iostream]\nE)   All of the above\n";
@@ -59,7 +59,7 @@ int main(){
     Q36 ="True or false: \n The address operator (&) returns the memory address of a variable.\n";
     Q37 ="a ";
     
-    map<string, string> question; //
+    map<string, string> question; 
     map<string, string> answer;
     map<string, int> points;
      
@@ -104,54 +104,55 @@ int main(){
     question["CIS215 Q12"] =Q36;
     question["CIS215 Q13"] =Q37;
     
+    //these are the answers to the questions that are mapped at specific key values which are denoted in []
+    answer[Q1] = "iterative"; //this is the answer to question 1
+    answer[Q2] = "a"; //this is the answer to question 2
+    answer[Q3] ="a"; //this is the answer to question 3
+    answer[Q4] ="a"; //this is the answer to question 4
+    answer[Q5] ="aA"; //this is the answer to question 5
+    answer[Q6] ="a"; //this is the answer to question 6
+    answer[Q7] ="a"; //this is the answer to question 7
+    answer[Q8] = "arithmetic overflow"; //this is the answer to question 8 
+    answer[Q9] = "analog"; //this is the answer to question 9
+    answer[Q10] = "amplitude"; //this is the answer to question 10
+    answer[Q11] = "boolean logic"; //this is the answer to question 11
+    answer[Q12] = "gate"; //this is the answer to question 12
+    answer[Q13] = "circuit"; //this is the answer to question 13
+    answer[Q14] = "computer science"; //this is the answer to question 14
+    answer[Q15] = "analysis of algorithms"; //this is the answer to question 15
+    answer[Q16] = "comment"; //this is the answer to question 16
+    answer[Q17] = "function"; //this is the answer to questino 17
+    answer[Q18] ="a"; //this is the answer to question 18
+    answer[Q19] = "c"; //this is the answer to question 19
+    answer[Q20] = "c"; //this is the answer to question 20
+    answer[Q21] = "function call"; //this is the answer to question 21
+    answer[Q22] = "if"; //this is the answer to question 22
+    answer[Q23] ="a"; //this is the answer to question 23
+    answer[Q24] ="a"; //this is the answer to question 24
+    answer[Q25] = "modular programming"; //this is the answer to question 25
+    answer[Q26] = "function"; //this is the answer to question 26
+    answer[Q27] = "arguments"; //this is the answer to question 27
+    answer[Q28] = "parameters"; //this is the answer to question 28
+    answer[Q29] = "pass by value"; //this is the answer to question 29
+    answer[Q30] = "local variable"; //this is the answer to question 30
+    answer[Q31] = "global variable"; //this is the answer to question 31
+    answer[Q32] = "global constants"; //this is the answer to question 32
+    answer[Q33] = "default arguments"; //this is the answer to question 33
+    answer[Q34] = "refence variable"; //this is the answer to question 34
+    answer[Q35] = "true"; //this is the answer to question 35
+    answer[Q36] = "true"; //this is the answer to question 36
+    answer[Q37] ="a"; //this is the answer to question 37
     
-    answer[Q1] = "iterative";
-    answer[Q2] = "a";
-    answer[Q3] ="a";
-    answer[Q4] ="a";
-    answer[Q5] ="aA";
-    answer[Q6] ="a";
-    answer[Q7] ="a";
-    answer[Q8] = "arithmetic overflow";
-    answer[Q9] = "analog";
-    answer[Q10] = "amplitude";
-    answer[Q11] = "boolean logic";
-    answer[Q12] = "gate";
-    answer[Q13] = "circuit";
-    answer[Q14] = "computer science";
-    answer[Q15] = "analysis of algorithms";
-    answer[Q16] = "comment";
-    answer[Q17] = "function";
-    answer[Q18] ="a";
-    answer[Q19] = "c";
-    answer[Q20] = "c";
-    answer[Q21] = "function call";
-    answer[Q22] = "if";
-    answer[Q23] ="a";
-    answer[Q24] ="a";
-    answer[Q25] = "modular programming";
-    answer[Q26] = "function";
-    answer[Q27] = "arguments";
-    answer[Q28] = "parameters";
-    answer[Q29] = "pass by value";
-    answer[Q30] = "local variable";
-    answer[Q31] = "global variable";
-    answer[Q32] = "global constants";
-    answer[Q33] = "default arguments";
-    answer[Q34] = "refence variable";
-    answer[Q35] = "true";
-    answer[Q36] = "true";
-    answer[Q37] ="a";
-    
-    for (int i = 0; i < 10; i++) {
-        int computerchoice;
-        srand(i);
-        computerchoice = (rand()%10)+1;
+    for (int i = 0; i < 10; i++) //start of for loop
+    {
+        int computerchoice; //initializes the variable computerchoice
+        srand(i); //this initializes a random variable
+        computerchoice = (rand()%10)+1; //this sets the computerchoice equal to the random number generator
         
-        cout<<computerchoice<<endl;
+        cout<<computerchoice<<endl;//displays the computer choice
     }
 
-    string userinput, correctchoice;
+    string userinput, correctchoice; //this initializes the strings userinput and correctchoice
     
     
     
