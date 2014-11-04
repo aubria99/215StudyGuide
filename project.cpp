@@ -148,7 +148,7 @@ int main() //main function
     }
 
     string userinput, correctchoice; //this initializes the strings userinput and correctchoice
-       cout<<"Welcome to your interactive Computer Science study guide!\n"
+    cout<<"Welcome to your interactive Computer Science study guide!\n"
     "This a tool that will help you study compter science core\n"
     "topics from CIS 111, all the way to CIS 215! As the game \n"
     "progresses the questions may seem to get a little bit more \n"
