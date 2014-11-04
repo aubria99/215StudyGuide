@@ -8,7 +8,7 @@ int main() //main function
 {
     string Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17, Q18, Q19, Q20, Q21, Q22, Q23, Q24, Q25, Q26, Q27, Q28, Q29, Q30, Q31, Q32, Q33, Q34, Q35, Q36, Q37; //list of strings which represent our questions
     
-    Q1 = "All the operations used to construct algorithms belong to one of only three categories: \n1.    Sequential \n2.    Conditional \nWhat is the third operation?\n\n"; //question 1 
+    Q1 = "All the operations used to construct algorithms belong to one of only three categories: \n1.    Sequential \n2.    Conditional \nWhat is the third operation?\n\n"; //question 1
     
     Q2 ="What is the best definition of an algorithm?\nA. A well-ordered collection of unambiguous and effectively computable operations that, when executed, produces a result and halts in a finite amount of time.\nB. A list of instructions that can be effectively computable or it can be unsolveable.\nC. Instructions to accomplish a task.\nD. Computer language.\n"; //question 2
     
@@ -28,6 +28,10 @@ int main() //main function
     Q12 ="A _______ is an electronic device that operates on a collection of binary inputs to produce a binary output.\n"; //question 12
     Q13 ="A _______ is a collection of logic gates that transforms a set of binary inputs into a set of binary outputs and in which the values of the outputs depend only on the current values of the inputs.\n"; //question 13
     Q14 ="The study of algorithms is _________	___________.\n"; //question 14
+    
+    
+    
+    
     Q15 ="The study of the efficiency of algorithms is called _________  __ __________.\n"; //question 15
     Q16 =" ";
     Q17 ="A  _______ can be thought of as a group of one or more, programming statements that collectively has a name.\n"; //question17
@@ -36,12 +40,16 @@ int main() //main function
     Q20 ="Which of the following statements is correct?\nA)   #include (iostream)\nB)   #include {iostream}\nC)   #include <iostream>\nD)   #include [iostream]\nE)   All of the above\n"; //question 20
     Q21 ="A _________ _____ is a statement that causes a function to execute. A function definition contains the statements that make up the function.\n"; //question 21
     Q22 ="The ___ statement can cause other statements to execute only under certain conditions.\n"; //question 22
-    Q23 ="What is the difference between == and = in C++?All of the below\nA.      == makes a comparison, = makes an assignment.\nB     == makes an assignment, = makes a comparison.\nC     they are the same thing.\D  "; //question 23
+    Q23 =" a"; //question 23
     Q24 ="a "; //question 24
+    
+    
+    
+    
     Q25 ="_______ ______ is breaking a program up into smaller, manageable functions. \n"; //question 25
     Q26 ="A ________ collection of statements to perform a specific task.\n"; //question 26
     Q27 =": __________: Values passed to a function.\n"; //question 27
-    Q28 ="__________: Variables in function that hold values passed as arguments.\n"; //question 28 
+    Q28 ="__________: Variables in function that hold values passed as arguments.\n"; //question 28
     Q29 ="_____  ___ _____: when an argument is passed to a function, a copy of its value is placed in the parameter.\n"; //question 29
     Q30 ="______  ______: defined within a function or block; accessible only with the function or block.\n"; //question 30
     Q31 ="______  ______: a variable defined outside all functions; it is accessible to all functions within its scope.\n"; //question 31
@@ -55,7 +63,7 @@ int main() //main function
     map<int, string> question; //this is passing in strings as vectors that will be used for the question
     map<string, string> answer; //this is passing in strings as vectors that will be used for the answer
     map<string, int> points; //this is passing in a string and an int as vectors that will be used for points
-     
+    
     //these are questions in the game
     //what the user will see is the string in [] which is being set to the key value which lines up with the mapping
     question[1] = Q1;
@@ -107,7 +115,7 @@ int main() //main function
     answer[Q5] ="aA"; //this is the answer to question 5
     answer[Q6] ="a"; //this is the answer to question 6
     answer[Q7] ="a"; //this is the answer to question 7
-    answer[Q8] = "arithmetic overflow"; //this is the answer to question 8 
+    answer[Q8] = "arithmetic overflow"; //this is the answer to question 8
     answer[Q9] = "analog"; //this is the answer to question 9
     answer[Q10] = "amplitude"; //this is the answer to question 10
     answer[Q11] = "boolean logic"; //this is the answer to question 11
@@ -122,7 +130,7 @@ int main() //main function
     answer[Q20] = "c"; //this is the answer to question 20
     answer[Q21] = "function call"; //this is the answer to question 21
     answer[Q22] = "if"; //this is the answer to question 22
-    answer[Q23] ="B"; //this is the answer to question 23
+    answer[Q23] ="a"; //this is the answer to question 23
     answer[Q24] ="a"; //this is the answer to question 24
     answer[Q25] = "modular programming"; //this is the answer to question 25
     answer[Q26] = "function"; //this is the answer to question 26
@@ -138,9 +146,9 @@ int main() //main function
     answer[Q36] = "true"; //this is the answer to question 36
     answer[Q37] ="a"; //this is the answer to question 37
     
-   
-
-    string userinput, correctchoice; //this initializes the strings userinput and correctchoice
+    
+    
+    string userinput, correctchoice, QA; //this initializes the strings userinput and correctchoice
     cout<< "****************************************************************" <<endl;
     cout<<"Welcome to your interactive Computer Science study guide!      *\n"
     "This a tool that will help you study compter science core      *\n"
@@ -154,7 +162,11 @@ int main() //main function
         int computerchoice; //initializes the variable computerchoice
         srand(i); //this initializes a random variable
         computerchoice = (rand()%10)+1; //this sets the computerchoice equal to the random number generator
-        
-        cout<<question[computerchoice]<<endl;//displays the computer choice
+        QA = question[computerchoice];
+        cout<<QA<<endl;//displays the computer choice
+        cin>>userinput;
+        if (userinput != answer[QA]){
+            cout<<"That is incorrect"<<endl;
+        }
     }
 }
