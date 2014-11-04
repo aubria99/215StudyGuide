@@ -52,7 +52,7 @@ int main() //main function
     Q36 ="True or false: \n The address operator (&) returns the memory address of a variable.\n"; //question 36
     Q37 ="a "; //question 37
     
-    map<string, string> question; //this is passing in strings as vectors that will be used for the question
+    map<int, string> question; //this is passing in strings as vectors that will be used for the question
     map<string, string> answer; //this is passing in strings as vectors that will be used for the answer
     map<string, int> points; //this is passing in a string and an int as vectors that will be used for points
      
