@@ -58,46 +58,46 @@ int main() //main function
      
     //these are questions in the game
     //what the user will see is the string in [] which is being set to the key value which lines up with the mapping
-    question["CIS111 Q1"] = Q1;
-    question["CIS111 Q2"] = Q2;
-    question["CIS111 Q3"] = Q3;
-    question["CIS111 Q4"] = Q4;
-    question["CIS111 Q5"] = Q5;
-    question["CIS111 Q6"] = Q6;
-    question["CIS111 Q7"] = Q7;
-    question["CIS111 Q8"] = Q8;
-    question["CIS111 Q9"] = Q9;
-    question["CIS111 Q10"] = Q10;
-    question["CIS111 Q11"] = Q11;
-    question["CIS111 Q12"] = Q12;
-    question["CIS111 Q13"] = Q13;
-    question["CIS111 Q14"] = Q14;
+    question[1] = Q1;
+    question[2] = Q2;
+    question[3] = Q3;
+    question[4] = Q4;
+    question[5] = Q5;
+    question[6] = Q6;
+    question[7] = Q7;
+    question[8] = Q8;
+    question[9] = Q9;
+    question[10] = Q10;
+    question[11] = Q11;
+    question[12] = Q12;
+    question[13] = Q13;
+    question[14] = Q14;
     
     
-    question["CIS121 Q1"] = Q15;
-    question["CIS121 Q2"] = Q16;
-    question["CIS121 Q3"] = Q17;
-    question["CIS121 Q4"] = Q18;
-    question["CIS121 Q5"] = Q19;
-    question["CIS121 Q6"] = Q20;
-    question["CIS121 Q7"] = Q21;
-    question["CIS121 Q8"] = Q22;
-    question["CIS121 Q9"] = Q23;
-    question["CIS121 Q10"] = Q24;
+    question[15] = Q15;
+    question[16] = Q16;
+    question[17] = Q17;
+    question[18] = Q18;
+    question[19] = Q19;
+    question[20] = Q20;
+    question[21] = Q21;
+    question[22] = Q22;
+    question[23] = Q23;
+    question[24] = Q24;
     
-    question["CIS215 Q1"] = Q25;
-    question["CIS215 Q2"] = Q26;
-    question["CIS215 Q3"] = Q27;
-    question["CIS215 Q4"] = Q28;
-    question["CIS215 Q5"] = Q29;
-    question["CIS215 Q6"] = Q30;
-    question["CIS215 Q7"] = Q31;
-    question["CIS215 Q8"] = Q32;
-    question["CIS215 Q9"] = Q33;
-    question["CIS215 Q10"] =Q34;
-    question["CIS215 Q11"] =Q35;
-    question["CIS215 Q12"] =Q36;
-    question["CIS215 Q13"] =Q37;
+    question[25] = Q25;
+    question[26] = Q26;
+    question[27] = Q27;
+    question[28] = Q28;
+    question[29] = Q29;
+    question[30] = Q30;
+    question[31] = Q31;
+    question[32] = Q32;
+    question[33] = Q33;
+    question[34] =Q34;
+    question[35] =Q35;
+    question[36] =Q36;
+    question[37] =Q37;
     
     //these are the answers to the questions that are mapped at specific key values which are denoted in []
     answer[Q1] = "iterative"; //this is the answer to question 1
@@ -138,14 +138,7 @@ int main() //main function
     answer[Q36] = "true"; //this is the answer to question 36
     answer[Q37] ="a"; //this is the answer to question 37
     
-    for (int i = 0; i < 10; i++) //start of for loop
-    {
-        int computerchoice; //initializes the variable computerchoice
-        srand(i); //this initializes a random variable
-        computerchoice = (rand()%10)+1; //this sets the computerchoice equal to the random number generator
-        
-        cout<<computerchoice<<endl;//displays the computer choice
-    }
+   
 
     string userinput, correctchoice; //this initializes the strings userinput and correctchoice
     cout<< "****************************************************************" <<endl;
@@ -156,5 +149,12 @@ int main() //main function
     "diffucult, but don't worry, that's a good thing. That means    *\n"
     "you're learning! We wish you the best of luck!!!               *\n"
     "****************************************************************"<<endl;
-    
+    for (int i = 0; i < 10; i++) //start of for loop
+    {
+        int computerchoice; //initializes the variable computerchoice
+        srand(i); //this initializes a random variable
+        computerchoice = (rand()%10)+1; //this sets the computerchoice equal to the random number generator
+        
+        cout<<question[computerchoice]<<endl;//displays the computer choice
+    }
 }
