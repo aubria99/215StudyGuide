@@ -36,7 +36,7 @@ int main() //main function
     Q20 ="Which of the following statements is correct?\nA)   #include (iostream)\nB)   #include {iostream}\nC)   #include <iostream>\nD)   #include [iostream]\nE)   All of the above\n"; //question 20
     Q21 ="A _________ _____ is a statement that causes a function to execute. A function definition contains the statements that make up the function.\n"; //question 21
     Q22 ="The ___ statement can cause other statements to execute only under certain conditions.\n"; //question 22
-    Q23 =" a"; //question 23
+    Q23 ="What is the difference between == and = in C++?All of the below\nA.      == makes a comparison, = makes an assignment.\nB     == makes an assignment, = makes a comparison.\nC     they are the same thing.\D  "; //question 23
     Q24 ="a "; //question 24
     Q25 ="_______ ______ is breaking a program up into smaller, manageable functions. \n"; //question 25
     Q26 ="A ________ collection of statements to perform a specific task.\n"; //question 26
@@ -122,7 +122,7 @@ int main() //main function
     answer[Q20] = "c"; //this is the answer to question 20
     answer[Q21] = "function call"; //this is the answer to question 21
     answer[Q22] = "if"; //this is the answer to question 22
-    answer[Q23] ="a"; //this is the answer to question 23
+    answer[Q23] ="B"; //this is the answer to question 23
     answer[Q24] ="a"; //this is the answer to question 24
     answer[Q25] = "modular programming"; //this is the answer to question 25
     answer[Q26] = "function"; //this is the answer to question 26
