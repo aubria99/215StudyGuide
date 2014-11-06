@@ -148,7 +148,7 @@ int main() //main function
     
     
     
-    string userinput, correctchoice, QA; //this initializes the strings userinput and correctchoice
+    string userinput, username, correctchoice, QA; //this initializes the strings userinput and correctchoice
     cout<< "****************************************************************" <<endl;
     cout<<"Welcome to your interactive Computer Science study guide!      *\n"
     "This a tool that will help you study compter science core      *\n"
@@ -156,7 +156,10 @@ int main() //main function
     "progresses the questions may seem to get a little bit more     *\n"
     "diffucult, but don't worry, that's a good thing. That means    *\n"
     "you're learning! We wish you the best of luck!!!               *\n"
-    "****************************************************************"<<endl;
+    "****************************************************************\n"<<endl;
+    
+    cout<<"What is you name?"<<endl;
+    getline (cin, username);
     for (int i = 0; i < 10; i++) //start of for loop
     {
         int computerchoice; //initializes the variable computerchoice
