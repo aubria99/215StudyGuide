@@ -287,7 +287,7 @@ int main() //main function
         else
         {
             score++;
-            cout<<score<<endl;
+            cout<<"Score: "<<score<<endl;
         }
         count++;
         //cout<<count<<endl; //need to be able to see how many they got wrong verse how many the have attempted
