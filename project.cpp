@@ -268,11 +268,17 @@ int main() //main function
     
     cout<<"What is you name?"<<endl;
     getline (cin, username);
-    
+    const int SIZE = 9;
+    int comp[SIZE];
     for (int i = 0; i < 10 && score < 7; i++) //start of for loop
     {
-        
         int computerchoice = CompSci111();
+        comp[i] = computerchoice; //puting it into the array
+        
+        cout<<endl<<comp[i]<<endl;//checking to make sure it is the right number
+        if ( i > 0){
+            cout<<comp[i-1]<<endl;// getting the number before it :) 
+        }
         //we need to make an array to now store the number that the generator called and 
         //check to make sure that whatever number is being called now isn't in the arry....can  
         //arrays be dynamic?? if not. we may have to use linked list :/
