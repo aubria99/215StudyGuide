@@ -146,8 +146,8 @@ int main() //main function
     answer[Q36] = "true"; //this is the answer to question 36
     answer[Q37] ="a"; //this is the answer to question 37
     
-    
-    
+     int score;
+    int count = score =0;
     string userinput, username, correctchoice, QA; //this initializes the strings userinput and correctchoice
     cout<< "****************************************************************" <<endl;
     cout<<"Welcome to your interactive Computer Science study guide!      *\n"
@@ -160,16 +160,28 @@ int main() //main function
     
     cout<<"What is you name?"<<endl;
     getline (cin, username);
-    for (int i = 0; i < 10; i++) //start of for loop
+    
+    for (int i = 0; i < 10 && score < 7; i++) //start of for loop
     {
+        
         int computerchoice; //initializes the variable computerchoice
         srand(i); //this initializes a random variable
-        computerchoice = (rand()%10)+1; //this sets the computerchoice equal to the random number generator
+        computerchoice = (rand()%40)+1; //this sets the computerchoice equal to the random number generator
         QA = question[computerchoice];
-        cout<<QA<<endl;//displays the computer choice
-        cin>>userinput;
+        cout<<computerchoice<<endl;
+        cout<<endl<<QA<<endl;//displays the computer choice
+        getline (cin, userinput);
+        //userinput.tolower();
         if (userinput != answer[QA]){
-            cout<<"That is incorrect"<<endl;
+            cout<<"That is incorrect\n\n"<<endl;
         }
+        else
+        {
+            score++;
+            cout<<score<<endl;
+        }
+        count++;
+        //cout<<count<<endl; //need to be able to see how many they got wrong verse how many the have attempted
+        
     }
 }
