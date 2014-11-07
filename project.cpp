@@ -129,6 +129,7 @@ int main() //main function
     question[35] =Q35;
     question[36] =Q36;
     question[37] =Q37;
+    
     question[38] = Q38;
     question[39] = Q39;
     question[40] = Q40;
@@ -169,6 +170,50 @@ int main() //main function
     question[75] = Q75;
     question[76] = Q76;
     question[77] = Q77;
+    question[78] = Q78;
+    question[79] = Q79;
+    question[80] = Q80;
+    question[81] = Q81;
+    question[82] = Q82;
+    question[83] = Q83;
+    question[84] = Q84;
+    question[85] = Q85;
+    question[86] = Q86;
+    question[87] = Q87;
+    question[88] = Q88;
+    question[89] = Q89;
+    question[90] = Q90;
+    question[91] = Q91;
+    question[92] = Q92;
+    question[93] = Q93;
+    question[94] = Q94;
+    question[95] = Q95;
+    question[96] = Q96;
+    question[97] = Q97;
+    question[98] = Q98;
+    question[99] = Q99;
+    question[100] = Q100;
+    question[101] = Q101;
+    question[102] = Q102;
+    question[103] = Q103;
+    question[104] = Q104;
+    question[105] = Q105;
+    question[106] = Q106;
+    question[107] = Q107;
+    question[108] = Q108;
+    question[109] = Q109;
+    question[110] = Q110;
+    question[111] = Q111;
+    question[112] = Q112;
+    question[113] = Q113;
+    question[114] = Q114;
+    question[115] = Q115;
+    question[116] = Q116;
+    question[117] = Q117;
+    question[118] = Q118;
+    question[119] = Q119;
+    question[120] = Q120;
+
     
     //these are the answers to the questions that are mapped at specific key values which are denoted in []
     answer[Q1] = "iterative"; //this is the answer to question 1
