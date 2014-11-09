@@ -270,33 +270,47 @@ int main() //main function
     getline (cin, username);
     const int SIZE = 9;
     int comp[SIZE];
-    for (int i = 0; i < 10 && score < 7; i++) //start of for loop
+    for (int i = 0; i < 10 && score < 5; i++) //start of for loop
     {
+    redo:
         int computerchoice = CompSci111();
         comp[i] = computerchoice; //puting it into the array
-        
-        cout<<endl<<comp[i]<<endl;//checking to make sure it is the right number
-        if ( i > 0){
-            cout<<comp[i-1]<<endl;// getting the number before it :) 
+        //checking the array
+        for (int k = 0; k < i; k++){//to check it aginst evrything already in the array
+            if(comp[k] == computerchoice){ //checking to see if it is in the array
+                goto redo; // if it is it should go back and racall the the 111 genorator
+            }
         }
-        //we need to make an array to now store the number that the generator called and 
-        //check to make sure that whatever number is being called now isn't in the arry....can  
-        //arrays be dynamic?? if not. we may have to use linked list :/
+        
+        //cout<<endl<<comp[i]<<endl;//checking to make sure it is the right number
         QA = question[computerchoice];
         cout<<computerchoice<<endl;
         cout<<endl<<QA<<endl;//displays the computer choice
         getline (cin, userinput);
-        //userinput.tolower();
+        //still need to make the input all to lower
         if (userinput != answer[QA]){
-            cout<<"That is incorrect\n\n"<<endl;
+            cout<<"That is incorrect\n"<<endl;
+            cout<<"The right answer was: "<<answer[QA]<<endl;//telling them the corect answer for the user's benfit.
+            score--;
+            if(score < 0 ){
+                cout<<"It may be time for you to hit the books :/"<<endl;
+                break;
+            }
+            cout<<"Score: "<<score<<endl;
         }
         else
         {
             score++;
-            cout<<"Score: "<<score<<endl;
+            cout<<"Score: "<<score<<endl;//keeping the user updated with their score
+            if(score == 5){//qualify for level two...may the odds be ever in their favor
+                cout<<"Congrats "<<username<<" you have passed the first level!"<<endl; //leting them know that finished level one
+            }
         }
         count++;
-        //cout<<count<<endl; //need to be able to see how many they got wrong verse how many the have attempted
+        if( count == 10 && score < 5){ //if you have gone through ten questions for the levell and the student did not get the min # correct to move on to the next level
+            cout<<"You did pretty good "<<username<<" but you have a little bit more studying to do"<<endl;
+        }
+        cout<<"Count: "<<count<<endl; //need to be able to see how many they got wrong verse how many the have attempted
         
     }
 }
