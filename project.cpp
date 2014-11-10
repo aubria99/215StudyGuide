@@ -218,7 +218,7 @@ int main() //main function
     //these are the answers to the questions that are mapped at specific key values which are denoted in []
     answer[Q1] = "iterative"; //this is the answer to question 1
     answer[Q2] = "a"; //this is the answer to question 2
-    answer[Q3] ="a"; //this is the answer to question 3
+    answer[Q3] ="d"; //this is the answer to question 3
     answer[Q4] ="a"; //this is the answer to question 4
     answer[Q5] ="aA"; //this is the answer to question 5
     answer[Q6] ="a"; //this is the answer to question 6
