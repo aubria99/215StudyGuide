@@ -313,4 +313,48 @@ int main() //main function
         cout<<"Count: "<<count<<endl; //need to be able to see how many they got wrong verse how many the have attempted
         
     }
+     count = 0;
+    for (int i = 0; i < 10 && score < 26 ; i++) //start of for loop
+    {
+    redo2:
+        int computerchoice = CompSci121();
+        comp[i] = computerchoice; //puting it into the array
+        //checking the array
+        for (int k = 0; k < i; k++){//to check it aginst evrything already in the array
+            if(comp[k] == computerchoice){ //checking to see if it is in the array
+                goto redo2; // if it is it should go back and racall the the 111 genorator
+            }
+        }
+        
+        //cout<<endl<<comp[i]<<endl;//checking to make sure it is the right number
+        QA = question[computerchoice];
+        cout<<computerchoice<<endl;
+        cout<<endl<<QA<<endl;//displays the computer choice
+        getline (cin, userinput);
+        //still need to make the input all to lower
+        if (userinput != answer[QA]){
+            cout<<"That is incorrect\n"<<endl;
+            cout<<"The right answer was: "<<answer[QA]<<endl;//telling them the corect answer for the user's benfit.
+            score-=2;
+            if(score < 0 ){
+                cout<<"It may be time for you to hit the books :/"<<endl;
+                break;
+            }
+            cout<<"Score: "<<score<<endl;
+        }
+        else
+        {
+            score+=4;
+            cout<<"Score: "<<score<<endl;//keeping the user updated with their score
+            if(score >= 25){//qualify for level two...may the odds be ever in their favor
+                cout<<"Congrats "<<username<<" you have passed the second level!"<<endl; //leting them know that finished level one
+            }
+        }
+        count++;
+        if( count == 10 && score < 5){ //if you have gone through ten questions for the levell and the student did not get the min # correct to move on to the next level
+            cout<<"You did pretty good "<<username<<" but you have a little bit more studying to do"<<endl;
+        }
+        cout<<"Count: "<<count<<endl; //need to be able to see how many they got wrong verse how many the have attempted
+        
+    }
 }
