@@ -218,9 +218,9 @@ int main() //main function
     //these are the answers to the questions that are mapped at specific key values which are denoted in []
     answer[Q1] = "iterative"; //this is the answer to question 1
     answer[Q2] = "a"; //this is the answer to question 2
-    answer[Q3] ="d"; //this is the answer to question 3
+    answer[Q3] = "d"; //this is the answer to question 3
     answer[Q4] ="a"; //this is the answer to question 4
-    answer[Q5] ="aA"; //this is the answer to question 5
+    answer[Q5] ="a"; //this is the answer to question 5
     answer[Q6] ="a"; //this is the answer to question 6
     answer[Q7] ="a"; //this is the answer to question 7
     answer[Q8] = "arithmetic overflow"; //this is the answer to question 8
@@ -248,14 +248,14 @@ int main() //main function
     answer[Q30] = "local variable"; //this is the answer to question 30
     answer[Q31] = "global variable"; //this is the answer to question 31
     answer[Q32] = "global constant"; //this is the answer to question 32
-    answer[Q33] = "default arguments"; //this is the answer to question 33
+    answer[Q33] = "default argument"; //this is the answer to question 33
     answer[Q34] = "refence variable"; //this is the answer to question 34
     answer[Q35] = "true"; //this is the answer to question 35
     answer[Q36] = "true"; //this is the answer to question 36
     answer[Q37] ="a"; //this is the answer to question 37
     
-    int score;
-    int count = score =0;
+    int score, wrong = 0;
+    int count = score = 0;
     string userinput, username, correctchoice, QA; //this initializes the strings userinput and correctchoice
     cout<< "****************************************************************" <<endl;
     cout<<"Welcome to your interactive Computer Science study guide!      *\n"
@@ -270,7 +270,7 @@ int main() //main function
     getline (cin, username);
     const int SIZE = 9;
     int comp[SIZE];
-    for (int i = 0; i < 10 && score < 5; i++) //start of for loop
+    for (int i = 0; i < 10 && score < 10; i++) //start of for loop
     {
     redo:
         int computerchoice = CompSci111();
@@ -292,6 +292,7 @@ int main() //main function
             cout<<"That is incorrect\n"<<endl;
             cout<<"The right answer was: "<<answer[QA]<<endl;//telling them the corect answer for the user's benfit.
             score--;
+            wrong++;
             if(score < 0 ){
                 cout<<"It may be time for you to hit the books :/"<<endl;
                 break;
@@ -300,9 +301,9 @@ int main() //main function
         }
         else
         {
-            score++;
+            score+=2;
             cout<<"Score: "<<score<<endl;//keeping the user updated with their score
-            if(score == 5){//qualify for level two...may the odds be ever in their favor
+            if(score >= 10){//qualify for level two...may the odds be ever in their favor
                 cout<<"Congrats "<<username<<" you have passed the first level!"<<endl; //leting them know that finished level one
             }
         }
@@ -313,21 +314,29 @@ int main() //main function
         cout<<"Count: "<<count<<endl; //need to be able to see how many they got wrong verse how many the have attempted
         
     }
-     count = 0;
-    for (int i = 0; i < 10 && score < 26 ; i++) //start of for loop
+    if (wrong == 0){
+        cout<<"You recieved a pefect score on this level. Conrats! Here is five extra points."<<endl;
+        score +=5;
+        cout<<"Score: "<<score<<endl;//keeping the user updated with their score
+    }
+    
+    if(score > 10){
+    count = 0; //count is just s we can keep track of how many questions we asked in this level
+    for (int i = 0; i < 10 && score < 31 ; i++) //initalize i to 0 and while i is less than ten and the score is not greater than 25 you should continue to go through the loop each time incrementing i by one
     {
-    redo2:
+    redo2: //where i want the computer to go back to if the number called in the psedo erandom number generator is already in the array that i have created
         int computerchoice = CompSci121();
-        comp[i] = computerchoice; //puting it into the array
+        comp[i] = computerchoice; //puting it into the array. It doesnt matter that it is the same array because i started at zero gain so it is going to copy over it
+         
         //checking the array
         for (int k = 0; k < i; k++){//to check it aginst evrything already in the array
             if(comp[k] == computerchoice){ //checking to see if it is in the array
-                goto redo2; // if it is it should go back and racall the the 111 genorator
+                goto redo2; // if it is it should go back and racall the the 121 genorator
             }
         }
         
         //cout<<endl<<comp[i]<<endl;//checking to make sure it is the right number
-        QA = question[computerchoice];
+        QA = question[computerchoice]; //
         cout<<computerchoice<<endl;
         cout<<endl<<QA<<endl;//displays the computer choice
         getline (cin, userinput);
@@ -336,6 +345,7 @@ int main() //main function
             cout<<"That is incorrect\n"<<endl;
             cout<<"The right answer was: "<<answer[QA]<<endl;//telling them the corect answer for the user's benfit.
             score-=2;
+            wrong++;
             if(score < 0 ){
                 cout<<"It may be time for you to hit the books :/"<<endl;
                 break;
@@ -346,7 +356,7 @@ int main() //main function
         {
             score+=4;
             cout<<"Score: "<<score<<endl;//keeping the user updated with their score
-            if(score >= 25){//qualify for level two...may the odds be ever in their favor
+            if(score >= 30){//qualify for level three...best of luck
                 cout<<"Congrats "<<username<<" you have passed the second level!"<<endl; //leting them know that finished level one
             }
         }
@@ -356,5 +366,6 @@ int main() //main function
         }
         cout<<"Count: "<<count<<endl; //need to be able to see how many they got wrong verse how many the have attempted
         
+    }
     }
 }
