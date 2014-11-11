@@ -264,7 +264,7 @@ int main() //main function
     "you're learning! We wish you the best of luck!!!               *\n"
     "****************************************************************\n"<<endl;
     
-    cout<<"What is you name?"<<endl;
+    cout<<"What is your name?"<<endl;
     getline (cin, username);
     const int SIZE = 9;
     int comp[SIZE];
