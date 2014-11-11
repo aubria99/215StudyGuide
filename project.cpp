@@ -270,6 +270,7 @@ int main() //main function
     getline (cin, username);
     const int SIZE = 9;
     int comp[SIZE];
+//LEVEL ONE ******************************************************************************************************************************************************************************
     for (int i = 0; i < 10 && score < 10; i++) //start of for loop
     {
     redo:
@@ -319,53 +320,53 @@ int main() //main function
         score +=5;
         cout<<"Score: "<<score<<endl;//keeping the user updated with their score
     }
-    
-    if(score > 10){
-    count = 0; //count is just s we can keep track of how many questions we asked in this level
-    for (int i = 0; i < 10 && score < 31 ; i++) //initalize i to 0 and while i is less than ten and the score is not greater than 25 you should continue to go through the loop each time incrementing i by one
-    {
-    redo2: //where i want the computer to go back to if the number called in the psedo erandom number generator is already in the array that i have created
-        int computerchoice = CompSci121();
-        comp[i] = computerchoice; //puting it into the array. It doesnt matter that it is the same array because i started at zero gain so it is going to copy over it
-         
-        //checking the array
-        for (int k = 0; k < i; k++){//to check it aginst evrything already in the array
-            if(comp[k] == computerchoice){ //checking to see if it is in the array
-                goto redo2; // if it is it should go back and racall the the 121 genorator
-            }
-        }
-        
-        //cout<<endl<<comp[i]<<endl;//checking to make sure it is the right number
-        QA = question[computerchoice]; //
-        cout<<computerchoice<<endl;
-        cout<<endl<<QA<<endl;//displays the computer choice
-        getline (cin, userinput);
-        //still need to make the input all to lower
-        if (userinput != answer[QA]){
-            cout<<"That is incorrect\n"<<endl;
-            cout<<"The right answer was: "<<answer[QA]<<endl;//telling them the corect answer for the user's benfit.
-            score-=2;
-            wrong++;
-            if(score < 0 ){
-                cout<<"It may be time for you to hit the books :/"<<endl;
-                break;
-            }
-            cout<<"Score: "<<score<<endl;
-        }
-        else
+//LEVEL TWO ******************************************************************************************************************************************************************************
+    if(score >= 10){//lchecking to see if the score is good enough to go to level two. You must have a score of at least 10 to move on
+        count = 0; //count is just s we can keep track of how many questions we asked in this level
+        for (int i = 0; i < 10 && score < 31 ; i++) //initalize i to 0 and while i is less than ten and the score is not greater than 25 you should continue to go through the loop each time incrementing i by one
         {
-            score+=4;
-            cout<<"Score: "<<score<<endl;//keeping the user updated with their score
-            if(score >= 30){//qualify for level three...best of luck
-                cout<<"Congrats "<<username<<" you have passed the second level!"<<endl; //leting them know that finished level one
+        redo2: //where i want the computer to go back to if the number called in the psedo erandom number generator is already in the array that i have created
+            int computerchoice = CompSci121();
+            comp[i] = computerchoice; //puting it into the array. It doesnt matter that it is the same array because i started at zero gain so it is going to copy over it
+            
+            //checking the array
+            for (int k = 0; k < i; k++){//to check it aginst evrything already in the array
+                if(comp[k] == computerchoice){ //checking to see if it is in the array
+                    goto redo2; // if it is it should go back and racall the the 121 genorator
+                }
             }
+            
+            //cout<<endl<<comp[i]<<endl;//checking to make sure it is the right number
+            QA = question[computerchoice]; //
+            cout<<computerchoice<<endl;
+            cout<<endl<<QA<<endl;//displays the computer choice
+            getline (cin, userinput);
+            //still need to make the input all to lower
+            if (userinput != answer[QA]){
+                cout<<"That is incorrect\n"<<endl;
+                cout<<"The right answer was: "<<answer[QA]<<endl;//telling them the corect answer for the user's benfit.
+                score-=2;
+                wrong++;
+                if(score < 0 ){
+                    cout<<"It may be time for you to hit the books :/"<<endl;
+                    break;
+                }
+                cout<<"Score: "<<score<<endl;
+            }
+            else
+            {
+                score+=4;
+                cout<<"Score: "<<score<<endl;//keeping the user updated with their score
+                if(score >= 30){//qualify for level three...best of luck
+                    cout<<"Congrats "<<username<<" you have passed the second level!"<<endl; //leting them know that finished level one
+                }
+            }
+            count++;
+            if( count == 10 && score < 5){ //if you have gone through ten questions for the levell and the student did not get the min # correct to move on to the next level
+                cout<<"You did pretty good "<<username<<" but you have a little bit more studying to do"<<endl;
+            }
+            cout<<"Count: "<<count<<endl; //need to be able to see how many they got wrong verse how many the have attempted
+            
         }
-        count++;
-        if( count == 10 && score < 5){ //if you have gone through ten questions for the levell and the student did not get the min # correct to move on to the next level
-            cout<<"You did pretty good "<<username<<" but you have a little bit more studying to do"<<endl;
-        }
-        cout<<"Count: "<<count<<endl; //need to be able to see how many they got wrong verse how many the have attempted
-        
-    }
     }
 }
