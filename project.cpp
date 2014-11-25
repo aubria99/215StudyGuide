@@ -1,5 +1,4 @@
 #include <map> //this allows you to use mapping in your program
-#include <locale>
 #include <string> //this allows you to use strings in your program
 #include <iostream> //this is what you need in every c++ program
 using namespace std; //using standard library
