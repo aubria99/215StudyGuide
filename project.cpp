@@ -1,4 +1,5 @@
 #include <map> //this allows you to use mapping in your program
+#include <locale>
 #include <string> //this allows you to use strings in your program
 #include <iostream> //this is what you need in every c++ program
 using namespace std; //using standard library
@@ -282,9 +283,15 @@ int main() //main function
     "diffucult, but don't worry, that's a good thing. That means    *\n"
     "you're learning! We wish you the best of luck!!!               *\n"
     "****************************************************************\n"<<endl;
-    
+    string ready;
     cout<<"What is your name?"<<endl;
     getline (cin, username);
+    
+    cout<<"\n\n\n\nHey "<<username<<"! Would you like to begin studying with us?\nEnter Y for yes or N for no."<<endl;
+    getline (cin, ready);
+    if((ready == "n") || (ready =="N")){
+        return 0;
+    }
     const int SIZE = 9;
     int comp[SIZE];
 //LEVEL ONE ******************************************************************************************************************************************************************************
