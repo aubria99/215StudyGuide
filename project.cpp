@@ -27,9 +27,12 @@ int CompSci215(){
     computerchoice = (rand()%40)+80; //this sets the computerchoice equal to the random number generator
     return computerchoice;
 }
+void checkanswer(string x ){
+    
+}
 int main() //main function
 {
-    string Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17, Q18, Q19, Q20, Q21, Q22, Q23, Q24, Q25, Q26, Q27, Q28, Q29, Q30, Q31, Q32, Q33, Q34, Q35, Q36, Q37,Q38, Q39, Q40, Q41, Q42, Q43, Q44, Q45, Q46, Q47, Q48, Q49, Q50, Q51, Q52, Q53, Q54, Q55, Q56, Q57, Q58, Q59, Q60, Q61, Q62, Q63, Q64, Q65, Q66, Q67, Q68, Q69, Q70, Q71, Q72, Q73, Q74, Q75, Q76, Q77, Q78, Q79, Q80, Q81, Q82, Q83, Q84, Q85, Q86, Q87, Q88, Q89, Q90, Q91, Q92, Q93, Q94, Q95, Q96, Q97, Q98, Q99, Q100, Q101, Q102, Q103, Q104, Q105, Q106, Q108, Q107, Q109, Q110, Q111, Q112, Q113, Q114, Q115, Q116, Q117, Q118, Q119, Q120; //list of strings which represent our questions
+    string Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17, Q18, Q19, Q20, Q21, Q22, Q23, Q24, Q25, Q26, Q27, Q28, Q29, Q30, Q31, Q32, Q33, Q34, Q35, Q36, Q37,Q38, Q39, Q40, Q41, Q42, Q43, Q44, Q45, Q46, Q47, Q48, Q49, Q50, Q51, Q52, Q53, Q54, Q55, Q56, Q57, Q58, Q59, Q60, Q61, Q62, Q63, Q64, Q65, Q66, Q67, Q68, Q69, Q70, Q71, Q72, Q73, Q74, Q75, Q76, Q77, Q78, Q79, Q80, Q81, Q82, Q83, Q84, Q85, Q86, Q87, Q88, Q89, Q90, Q91, Q92, Q93, Q94, Q95, Q96, Q97, Q98, Q99, Q100, Q101, Q102, Q103, Q104, Q105, Q106, Q108, Q107, Q109, Q110, Q111, Q112, Q113, Q114, Q115, Q116, Q117,Q118, Q119, Q120,Q121, Q122, Q123, Q124, Q125, Q126, Q127, Q128, Q129, Q130, Q131, Q132, Q133, Q134, Q135; //list of strings which represent our questions
     
     Q1 = "All the operations used to construct algorithms belong to one of only three categories: \n1.    Sequential \n2.    Conditional \nWhat is the third operation?\n\n"; //question 1
     
@@ -85,7 +88,7 @@ int main() //main function
     
     map<int, string> question; //this is passing in strings as vectors that will be used for the question
     map<string, string> answer; //this is passing in strings as vectors that will be used for the answer
-    map<string, int> points; //this is passing in a string and an int as vectors that will be used for points
+   // map<string, int> points; //this is passing in a string and an int as vectors that will be used for points
     
     //these are questions in the game
     //what the user will see is the string in [] which is being set to the key value which lines up with the mapping
@@ -129,12 +132,12 @@ int main() //main function
     question.insert ( std::pair<int,string>(38,Q38) );
     question.insert ( std::pair<int,string>(39,Q39) );
     question.insert ( std::pair<int,string>(40,Q40) );
-    //oficially doen with level one staring level two
     question.insert ( std::pair<int,string>(41,Q41) );
     question.insert ( std::pair<int,string>(42,Q42) );
     question.insert ( std::pair<int,string>(43,Q43) );
     question.insert ( std::pair<int,string>(44,Q44) );
     question.insert ( std::pair<int,string>(45,Q45) );
+    //oficially doen with level one staring level two
     question.insert ( std::pair<int,string>(46,Q46) );
     question.insert ( std::pair<int,string>(47,Q47) );
     question.insert ( std::pair<int,string>(48,Q48) );
@@ -170,7 +173,6 @@ int main() //main function
     question.insert ( std::pair<int,string>(78,Q78) );
     question.insert ( std::pair<int,string>(79,Q79) );
     question.insert ( std::pair<int,string>(80,Q80) );
-    //oficially doen with level two staring level three
     question.insert ( std::pair<int,string>(81,Q81) );
     question.insert ( std::pair<int,string>(82,Q82) );
     question.insert ( std::pair<int,string>(83,Q83) );
@@ -181,6 +183,7 @@ int main() //main function
     question.insert ( std::pair<int,string>(88,Q88) );
     question.insert ( std::pair<int,string>(89,Q89) );
     question.insert ( std::pair<int,string>(90,Q90) );
+    //oficially doen with level two staring level three
     question.insert ( std::pair<int,string>(91,Q91) );
     question.insert ( std::pair<int,string>(92,Q92) );
     question.insert ( std::pair<int,string>(93,Q93) );
@@ -211,6 +214,23 @@ int main() //main function
     question.insert ( std::pair<int,string>(118,Q118) );
     question.insert ( std::pair<int,string>(119,Q119) );
     question.insert ( std::pair<int,string>(120,Q120) );
+    question.insert ( std::pair<int,string>(121,Q121) );
+    question.insert ( std::pair<int,string>(122,Q122) );
+    question.insert ( std::pair<int,string>(123,Q123) );
+    question.insert ( std::pair<int,string>(124,Q124) );
+    question.insert ( std::pair<int,string>(125,Q125) );
+    question.insert ( std::pair<int,string>(126,Q126) );
+    question.insert ( std::pair<int,string>(127,Q127) );
+    question.insert ( std::pair<int,string>(128,Q128) );
+    question.insert ( std::pair<int,string>(129,Q129) );
+    question.insert ( std::pair<int,string>(130,Q130) );
+    question.insert ( std::pair<int,string>(131,Q131) );
+    question.insert ( std::pair<int,string>(132,Q132) );
+    question.insert ( std::pair<int,string>(133,Q133) );
+    question.insert ( std::pair<int,string>(134,Q134) );
+    question.insert ( std::pair<int,string>(135,Q135) );
+
+
     
     
     //these are the answers to the questions that are mapped at specific key values which are denoted in []
@@ -280,13 +300,15 @@ int main() //main function
                 goto redo; // if it is it should go back and racall the the 111 genorator
             }
         }
-        
-        //cout<<endl<<comp[i]<<endl;//checking to make sure it is the right number
         QA = question[computerchoice];
         cout<<computerchoice<<endl;
         cout<<endl<<QA<<endl;//displays the computer choice
         getline (cin, userinput);
         //still need to make the input all to lower
+        for(int j = 0; j< userinput.length(); j++){
+            userinput[j] = tolower(userinput[j]);
+        }
+        
         if (userinput != answer[QA]){
             cout<<"That is incorrect\n"<<endl;
             cout<<"The right answer was: "<<answer[QA]<<endl;//telling them the corect answer for the user's benfit.
