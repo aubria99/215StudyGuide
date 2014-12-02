@@ -129,7 +129,7 @@ int bonus(string username, int num){
         }
         QA = question[computerchoice];
         cout<<computerchoice<<endl;
-        cout<<endl<<QA<<endl;//displays the computer choice
+        cout<<"Remember to type all of your answers in lowercase and singular"<<endl<<endl<<QA<<endl;//displays the computer choice
         getline (cin, userinput);
         userinput = lower(userinput);//calling the fuction to turn the user's answer to all lower case
         if (userinput != answer[QA]){
