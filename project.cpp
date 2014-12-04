@@ -85,6 +85,7 @@ nicetry:
     if((ready == "n") || (ready =="N")){//if the user does not wish to study
         return 0; //username;
     }
+    return 1;
     
 }
 int newQ(string username){ //funtion to ask the user if they would like to enter their own questions
